@@ -1,0 +1,14 @@
+name : Shell Commands
+
+on: [push]
+
+job:
+  run-shell-command:
+    run-on: ubuntu-lastest
+    steps:
+      - name: echo a string
+        run: echo "Hello GitHub Actions"
+      - name: multiline script
+        run: |
+          node -v
+          npm -v             
